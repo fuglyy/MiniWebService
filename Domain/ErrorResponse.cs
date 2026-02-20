@@ -1,0 +1,11 @@
+namespace MiniWebService.Domain;
+
+
+/// <summary>
+/// Единый формат ошибки для клиентов.
+/// </summary>
+public sealed record ErrorResponse(
+    string Code,
+    string Message,
+    string RequestId
+);
