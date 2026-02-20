@@ -84,6 +84,10 @@ public sealed class MovieController : ControllerBase
             throw new ValidationException("Name too long (max 100)");
         }
 
+        if (string.IsNullOrWhiteSpace(request.Genre)){
+            throw new ValidationException("Name required");
+        }
+
         if (request.Rating < 0 || request.Rating > 10){
             throw new ValidationException("Rating must be between 0 and 10");
         }
